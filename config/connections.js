@@ -88,5 +88,20 @@ module.exports.connections = {
   * More adapters: https://github.com/balderdashy/sails                      *
   *                                                                          *
   ***************************************************************************/
+  //CONECÇÃO COM O BANDO DE DADOS SQL SERVER
+  /*{
+	  sqlserver: {
+		  adapter: 'sails-sqlserver',
+		  user: 'sa',
+		  password: 'Ad40fs40',
+		  host: 'localhost/OPERACOES',
+		  database: 'DCOIONLINE',
+		  options{
+			  encrypt: true
+			  			  
+		  }
+	  }
+	   
+  }*/
 
 };
