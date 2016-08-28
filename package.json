@@ -22,7 +22,8 @@
     "rc": "1.0.1",
     "sails": "~0.12.3",
     "sails-disk": "~0.10.9",
-    "sails-sqlserver": "^0.10.8"
+    "sails-sqlserver": "^0.10.8",
+    "sails-mssql": "git://github.com/jaredfromsubway/sails-mssql.git#master"
   },
   "scripts": {
     "debug": "node debug app.js",
@@ -31,9 +32,8 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/DCOIOnline.git"
+    "url": "git://githubcom/anonymous node/sails user/DCOIOnline.git"
   },
   "author": "anonymous node/sails user",
   "license": ""
 }
-

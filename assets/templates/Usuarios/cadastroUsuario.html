@@ -1,0 +1,52 @@
+<!--<div id="page-wrapper" style="min-height: 860px;">-->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Cadastra usuarios</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Usuario
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <form role="form" ng-controller="InserirUsuarioController as InserirUsuario"
+                        ng-submit="InserirUsuario.criar()">
+                        <div class="form-group">
+                            <label>Nome do usuário</label>
+                            <input type='text' class="form-control" placeholder="Informe o nome do usuario." ng-model="InserirUsuario.usuario.usu_nome">
+
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Usuário de acesso</label>
+                            <input type='text' class="form-control" ng-model="InserirUsuario.usuario.usu_log">
+                            
+                        </div>
+                        <div class="form-group">
+                            <label>Senha de acesso</label>
+                            <input type='password' class="form-control" ng-model="InserirUsuario.usuario.usu_sen">
+                            
+                        </div>
+                        <button type="submit" class="btn btn-default" name="confimaCadastroUsuario">Confirmar</button>
+                        <button type="submit" class="btn btn-default" name="cancelarCadastroUsuario">Cancelar</button>
+
+                    </form>
+                </div>
+                <!-- /.col-lg-6 (nested) -->
+            </div>
+            <!-- /.row (nested) -->
+        </div>
+        <!-- /.panel-body -->
+    </div>
+    <!-- /.panel -->
+</div>
+<!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+        <!--</div>-->

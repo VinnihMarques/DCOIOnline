@@ -5,11 +5,14 @@ var app = angular.module('DCOIOnlineApp', ['ngRoute']);
 app.config(['$routeProvider', '$locationProvider',
  function($routeProvider, $locationProvider) {
    $routeProvider
-     .when('/clientes', {
-       templateUrl: '/templates/Clientes/cadastroCliente.html'
+     .when('/usuarios', {
+       templateUrl: '/templates/Usuarios/cadastroUsuario.html'
      })
      .when('/aquisicao',{
      	templateUrl: '/templates/Aquisicoes/cadastroAquisicao.html'
+     	  })
+     .when('/aquisicaoCarrosel',{
+     	templateUrl: '/templates/Aquisicoes/cadastroAquisicaoCarrosel.html'
      	  })
      	
 

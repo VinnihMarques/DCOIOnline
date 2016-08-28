@@ -18,7 +18,12 @@ module.exports = {
   		unique: true,
   		required: true
   	},
-  	cli_razaoSocial: {
+      cli_nomeFantasia: {
+      type: 'string',
+      
+    },
+    
+    cli_razaoSocial: {
   		type: 'string',
   		
   	},

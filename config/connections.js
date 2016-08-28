@@ -28,9 +28,9 @@ module.exports.connections = {
   * Installed by default.                                                    *
   *                                                                          *
   ***************************************************************************/
-  localDiskDb: {
+  /*localDiskDb: {
     adapter: 'sails-disk'
-  },
+  },*/
 
   /***************************************************************************
   *                                                                          *
@@ -89,19 +89,17 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
   //CONECÇÃO COM O BANDO DE DADOS SQL SERVER
-  /*{
-	  sqlserver: {
-		  adapter: 'sails-sqlserver',
-		  user: 'sa',
-		  password: 'Ad40fs40',
-		  host: 'localhost/OPERACOES',
-		  database: 'DCOIONLINE',
-		  options{
-			  encrypt: true
-			  			  
-		  }
-	  }
-	   
-  }*/
+
+  sailsMSSQLServer: {
+    adapter: 'sails-mssql',
+    user: 'kpl',
+    password: 'Ad40fs40',
+    host: 'localhost/OPERACOES',
+    port: 1433,
+    database: 'DCOIONLINE'
+}
+
+
+
 
 };
