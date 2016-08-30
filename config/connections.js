@@ -92,10 +92,10 @@ module.exports.connections = {
 
   sailsMSSQLServer: {
     adapter: 'sails-mssql',
-    user: 'kpl',
-    password: 'Ad40fs40',
-    host: 'localhost/OPERACOES',
-    port: 1433,
+    user: 'sa',
+    password: 'fama180296',
+    host: 'VINICIUS-PC',
+    port: 9090,
     database: 'DCOIONLINE'
 }
 

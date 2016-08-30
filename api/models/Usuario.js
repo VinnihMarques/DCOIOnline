@@ -9,7 +9,8 @@ module.exports = {
 
   attributes: {
   	usu_cod: {
-  		type: 'int'
+  		type: 'int',
+      primaryKey : true
   		
   	},
   	usu_nome: {
@@ -26,5 +27,12 @@ module.exports = {
   		
   	},
 
-  }
+   
+
+  },
+
+  autoCreatedAt:false,
+
+  autoUpdatedAt:false,
+  autoPK: true
 };

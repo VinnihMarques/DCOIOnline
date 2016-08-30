@@ -17,6 +17,11 @@
                     <div class="col-lg-6">
                         <form role="form" ng-controller="InserirUsuarioController as InserirUsuario"
                         ng-submit="InserirUsuario.criar()">
+                         <div class="form-group">
+                            <label>Código Usuario</label>
+                            <input type='text' class="form-control" placeholder="Código" ng-model="InserirUsuario.usuario.usu_cod">
+
+                        </div>
                         <div class="form-group">
                             <label>Nome do usuário</label>
                             <input type='text' class="form-control" placeholder="Informe o nome do usuario." ng-model="InserirUsuario.usuario.usu_nome">
@@ -34,7 +39,7 @@
                             
                         </div>
                         <button type="submit" class="btn btn-default" name="confimaCadastroUsuario">Confirmar</button>
-                        <button type="submit" class="btn btn-default" name="cancelarCadastroUsuario">Cancelar</button>
+                        <button type="reset" class="btn btn-default" name="cancelarCadastroUsuario">Cancelar</button>
 
                     </form>
                 </div>
