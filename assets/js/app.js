@@ -5,6 +5,10 @@ var app = angular.module('DCOIOnlineApp', ['ngRoute']);
 app.config(['$routeProvider', '$locationProvider',
  function($routeProvider, $locationProvider) {
    $routeProvider
+     .when('/consultaUsuario', {
+       templateUrl: '/templates/Usuarios/consultaUsuario.html'
+     })
+     
      .when('/usuarios', {
        templateUrl: '/templates/Usuarios/cadastroUsuario.html'
      })
