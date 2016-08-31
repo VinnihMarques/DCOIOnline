@@ -8,7 +8,7 @@
 module.exports = {
 
   attributes: {
-  	usu_cod: {
+  	id: {
   		type: 'int',
       primaryKey : true
   		
@@ -27,12 +27,14 @@ module.exports = {
   		
   	},
 
+
+
    
 
   },
-
+  autoPK: true,
+  tableName: 'TADM_USUSIS',
   autoCreatedAt:false,
-
-  autoUpdatedAt:false,
-  autoPK: true
+  autoUpdatedAt:false
+  
 };

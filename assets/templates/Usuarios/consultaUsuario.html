@@ -7,36 +7,52 @@
 </div>
 <!-- /.row -->
 <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Lista de usuários do sistema
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body" ng-controller = 'ConsultarUsuarioController as ConsultaUsuario'>
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Nome do usuário</th>
-                                            <th>Login de acesso</th>
-                                            <th>Perfil de acesso</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr ng-repeat ='rowUsuario in usuarios'>
-                                            <td>{{rowUsuario.usu_cod}}</td>
-                                            <td>{{rowUsuario.usu_nome}}</td>
-                                            <td>{{rowUsuario.usu_log}}</td>
-                                            <td>Permissão</td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Lista de usuários do sistema
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body" ng-controller = 'UsuarioController as UsuarioCtrl'>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                         <th>Código do usuário</th>
+                         <th>Nome do usuário</th>
+                         <th>Login de acesso</th>
+
+                         <th>Perfil de acesso</th>
+                         <th>Ações</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                    <tr ng-repeat ='rowUsuario in usuarios'>
+                        <td>{{rowUsuario.id}}</td>
+                        <td>{{rowUsuario.usu_nome}}</td>
+                        <td>{{rowUsuario.usu_log}}</td>
+                        <td>Permissão</td>
+                        <td>
+                            <a href="/editaUsuario/{{ rowUsuario.id }}">
+                                <button type="button" class="btn btn-primary btn-circle">
+
+                                    <i class="fa fa-list"></i>
+                                </button>
+                            </a>
+                            
+
+                            <button type="button" class="btn btn-warning btn-circle" ng-click = 'UsuarioCtrl.remover(rowUsuario.id)'>
+                                <i class="fa fa-times" ></i>
+                            </button>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /.panel -->
+</div>
