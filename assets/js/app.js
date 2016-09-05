@@ -8,8 +8,11 @@ app.config(['$routeProvider', '$locationProvider',
      .when('/consultaUsuario', {
        templateUrl: '/templates/Usuarios/consultaUsuario.html'
      })
+     .when('/editaUsuario/:id', {
+       templateUrl: '/templates/Usuarios/editaUsuario.html'
+     })
      
-     .when('/usuarios', {
+     .when('/cadastraUsuario', {
        templateUrl: '/templates/Usuarios/cadastroUsuario.html'
      })
      .when('/aquisicao',{
