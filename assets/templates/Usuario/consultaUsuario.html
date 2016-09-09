@@ -27,12 +27,12 @@
                  </thead>
                  <tbody>
                     <tr ng-repeat ='rowUsuario in usuarios'>
-                        <td>{{rowUsuario.id}}</td>
+                        <td>{{rowUsuario.usu_cod}}</td>
                         <td>{{rowUsuario.usu_nome}}</td>
                         <td>{{rowUsuario.usu_log}}</td>
                         <td>Permissão</td>
                         <td>
-                            <a href="/editaUsuario/{{ rowUsuario.id }}">
+                            <a href="/editaUsuario/{{ rowUsuario.usu_cod }}">
                                 <button type="button" class="btn btn-primary btn-circle">
 
                                     <i class="fa fa-list"></i>
@@ -40,7 +40,7 @@
                             </a>
                             
 
-                            <button type="button" class="btn btn-warning btn-circle" ng-click = 'UsuarioCtrl.remover(rowUsuario.id)'>
+                            <button type="button" class="btn btn-warning btn-circle" ng-click = 'UsuarioCtrl.remover(rowUsuario.usu_cod)'>
                                 <i class="fa fa-times" ></i>
                             </button>
 

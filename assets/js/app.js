@@ -6,14 +6,14 @@ app.config(['$routeProvider', '$locationProvider',
  function($routeProvider, $locationProvider) {
    $routeProvider
      .when('/consultaUsuario', {
-       templateUrl: '/templates/Usuarios/consultaUsuario.html'
+       templateUrl: '/templates/Usuario/consultaUsuario.html'
      })
      .when('/editaUsuario/:id', {
-       templateUrl: '/templates/Usuarios/editaUsuario.html'
+       templateUrl: '/templates/Usuario/editaUsuario.html'
      })
      
-     .when('/cadastraUsuario', {
-       templateUrl: '/templates/Usuarios/cadastroUsuario.html'
+     .when('/cadastroUsuario', {
+       templateUrl: '/templates/Usuario/cadastroUsuario.html'
      })
      .when('/aquisicao',{
      	templateUrl: '/templates/Aquisicoes/cadastroAquisicao.html'

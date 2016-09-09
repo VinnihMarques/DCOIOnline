@@ -99,7 +99,4 @@ module.exports.connections = {
     database: 'DCOIONLINE'
 }
 
-
-
-
 };
