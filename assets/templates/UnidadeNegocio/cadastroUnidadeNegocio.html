@@ -6,15 +6,15 @@
 </div>
 <!-- /.row -->
 <div class="row">
-   <!-- INÍCIO - CADASTRO DE CLIENTE IDENTIFICAÇÃO / CONTATO  -->
-   <div class="col-lg-12">
+ <!-- INÍCIO - CADASTRO DE CLIENTE IDENTIFICAÇÃO / CONTATO  -->
+ <div class="col-lg-12">
     <div class="panel panel-default">
         <div class="panel-heading">
             CADASTRO DE UNIDADE DE NEGÓCIO
         </div>
         <!-- DIV CADASTRO DE CLIENTES  - IDENTIFICAÇÃO><-->
         <div class="panel-body">
-            <form role="form"  ng-controller="ClienteInserirController as ClienteInserirCtrl" ng-submit="ClienteInserirCtrl.criarCliente()">
+            <form role="form"  ng-controller="UnidadeNegocioInserirController as UnidadeNegocioInserirCtrl" ng-submit="UnidadeNegocioInserirCtrl.criarUnidade()">
                 <div class="row">
                     <div class="col-lg-6" border='0'>
                         <div class="panel panel-default">
@@ -22,173 +22,181 @@
                                 Identificação
                             </div>
                             <div class="form-group">
-                                <label>Nome da unidade</label>
-                                <input type="text" class="form-control" ng-model="ClienteInserirCtrl.cliente.cli_nom">
-                            </div>
-                            <div class="form-group">
-                                <label>Razão Social da unidade</label>
-                                <input type="text" class="form-control"  ng-model="ClienteInserirCtrl.cliente.cli_raz">
-                            </div>
-                            <div class="form-group">
-                                <label>Sigla da unidade</label>
-                                <input type="text" class="form-control"  ng-model="ClienteInserirCtrl.cliente.cli_raz">
-                            </div>
-                            <div class="form-group">
-                                <label>CNPJ</label>
-                                <input type="text" class="form-control"  ng-model="ClienteInserirCtrl.cliente.cli_cnpj">
-                            </div>
-                            <div class="form-group">
-                                <label>Inscrição estadual</label>
-                                <input type="text" class="form-control"  ng-model="ClienteInserirCtrl.cliente.cli_cnpj">
-                            </div>
-                            <div class="form-group">
-                                <label>Inscrição municipal</label>
-                                <input type="text" class="form-control"  ng-model="ClienteInserirCtrl.cliente.cli_ie">
-                            </div>
-                            <div class="form-group">
-                                <label>Regime tributário</label>
-                                <select class="form-control" ng-model="ClienteInserirCtrl.cliente.cli_hosp">
-                                    <option>Simples Nacional</option>
-                                    <option>Regime Normal</option>                                       
+                                <label>Selecione o cliente</label>
+                                <select class="form-control" ng-options="clientes.cli_nom for clientes in clientes track by clientes.cli_cod" ng-model="cliente">
                                 </select>                               
                             </div>
                             <div class="form-group">
-
-                                <label>ID Hospedagem Mercado Backoffice</label>
-                                <input type="text" class="form-control"  ng-model="ClienteInserirCtrl.cliente.cli_id_hosp">                            
+                                <label>Nome da unidade</label>
+                                <input type="text" class="form-control" ng-model="UnidadeNegocioInserirCtrl.unidade.uni_nom">
                             </div>
-                            
+                            <div class="form-group">
+                                <label>Razão Social da unidade</label>
+                                <input type="text" class="form-control"  ng-model="UnidadeNegocioInserirCtrl.unidade.uni_raz">
+                            </div>
+                            <div class="form-group">
+                                <label>Sigla da unidade</label>
+                                <input type="text" class="form-control"  ng-model="UnidadeNegocioInserirCtrl.unidade.uni_sig">
+                            </div>
+                            <div class="form-group">
+                                <label>CNPJ</label>
+                                <input type="text" class="form-control"  ng-model="UnidadeNegocioInserirCtrl.unidade.uni_cnpj">
+                            </div>
+                            <div class="form-group">
+                                <label>Inscrição estadual</label>
+                                <input type="text" class="form-control"  ng-model="UnidadeNegocioInserirCtrl.unidade.uni_ie">
+                            </div>
+                            <div class="form-group">
+                                <label>Inscrição municipal</label>
+                                <input type="text" class="form-control"  ng-model="UnidadeNegocioInserirCtrl.unidade.uni_im">
+                            </div>
+                            <div class="form-group">
+                                <label>Regime tributário</label>
+                                <select class="form-control" ng-model="UnidadeNegocioInserirCtrl.unidade.uni_reg">
+                                    <option>Simples Nacional</option>
+                                    <option>Normal</option>                                       
+                                </select>                               
+                            </div>
+
                         </div>
                     </div><!-- FIM DA DIV CADASTRO DE CLIENTES  - IDENTIFICAÇÃO><-->
 
                     <div class="col-lg-6"> 
 
-                        <!-- DIV CADASTRO DE CLIENTES  - CONTATO DO CLIENTE> AQUI É PRA SER A TELA QUE CADASTROU A UNIDADE DEVE APARECER<-->
-                        <!--<div class="panel panel-default">
-                            <div class="panel-heading">
-                                Contato do cliente
-                            </div>
-                            <!-- /.panel-heading 
-                            <div class="panel-body">
-                                <div class="form-group">
-                                    <label>Telefone do cliente</label>
-                                    <input type="text" class="form-control" ng-model="ClienteInserirCtrl.contato.con_tel">
-                                </div>
-                                <div class="form-group">
-                                    <label>Celular do cliente</label>
-                                    <input type="text" class="form-control"  ng-model="ClienteInserirCtrl.contato.con_cel">
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Fax</label>
-                                    <input type="text" class="form-control"  ng-model="ClienteInserirCtrl.contato.con_fax">
-                                </div>
-                                <div class="form-group">
-                                    <label>E-mail</label>
-                                    <input type="text" class="form-control"  ng-model="ClienteInserirCtrl.contato.con_email">
-                                </div>
-                                <div class="form-group">
-                                    <label>Responsável</label>
-                                    <input type="text" class="form-control"ng-model="ClienteInserirCtrl.contato.con_resp">                             
-                                </div>
-                            </div>
-                            <!-- /.panel-body -->
+                        <div class="panel panel-default">
+                         <div class="panel-heading">
+                            Unidade de Negocio
                         </div>
-                        <!-- /.panel -->
-                    </div> <!-- FIM DIV CADASTRO DE CLIENTES  - CONTATO DO CLIENTE><-->
-                    <!-- /.col-lg-6 (nested) -->
-                </div>
-                <!-- /.row (nested) -->
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                         <div class="table-responsive">
+                             <table class="table table-striped">
+                                 <thead>
+                                     <tr>
+                                         <th>Nome do Cliente</th>
+                                         <th>Nome da unidade</th>
+                                         <th>CNPJ</th>
+                                         <th>Regime Tributário</th>
+                                         <th>Ação</th>
 
-
-                <!-- /.panel-body -->
-
-                <!-- /.panel -->
-
-                <!-- /.col-lg-12 -->
-                <!-- FIM - CADASTRO DE CLIENTE IDENTIFICAÇÃO / CONTATO  -->
-
-                <!-- INICIO - CADASTRO DE CLIENTE DADOS CADASTRAIS -->
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                           Endereço da unidade de negócio
-                       </div>
-                       <div class="panel-body">
-                        <div class="row" >
-                           <div class="col-lg-12">
-                            <div class="form-group">
-                                <label>Logradouro</label>
-                                <input type="text" class="form-control" placeholder="Digite o caracter inicial" ng-model="ClienteInserirCtrl.cliente.cli_qtd_usu">
-                            </div>
-                            <div class="form-group">
-                                <label>Numero</label>
-                                <input type="text" class="form-control" placeholder="Digite o caracter inicial" ng-model="ClienteInserirCtrl.cliente.cli_qtd_usu">
-                            </div>
-                            <div class="form-group">
-                                <label>Bairro</label>
-                                <input type="text" class="form-control" placeholder="Digite o caracter inicial" ng-model="ClienteInserirCtrl.cliente.cli_qtd_usu">
-                            </div>
-                            <div class="form-group">
-                                <label>Complemento</label>
-                                <input type="text" class="form-control" placeholder="Digite o caracter inicial" ng-model="ClienteInserirCtrl.cliente.cli_qtd_usu">
-                            </div>
-                            <div class="form-group">
-                                <label>Cidade</label>
-                                <input type="text" class="form-control" placeholder="Digite o caracter inicial" ng-model="ClienteInserirCtrl.cliente.cli_qtd_usu">
-                            </div>
-
-                            <div class="form-group">
-                                <label>UF</label>
-                                <select class="form-control" ng-model="ClienteInserirCtrl.cliente.cli_ana_prj">
-                                    <option>AC</option>
-                                    <option>AL</option>
-                                    <option>AP</option>
-                                    <option>AM</option>
-                                    <option>BA</option>
-                                    <option>CE</option>
-                                    <option>DF</option>
-                                    <option>ES</option>
-                                    <option>GO</option>
-                                    <option>MA</option>
-                                    <option>MT</option>
-                                    <option>MS</option>
-                                    <option>MG</option>
-                                    <option>PA</option>
-                                    <option>PB</option>
-                                    <option>PR</option>
-                                    <option>PE</option>
-                                    <option>PI</option>
-                                    <option>RJ</option>
-                                    <option>RN</option>
-                                    <option>RS</option>
-                                    <option>RO</option>
-                                    <option>SC</option>
-                                    <option>SP</option>
-                                    <option>TO</option>                                          
-                                </select> 
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-info btn-circle btn-lg"><i class="fa fa-check"></i></button>
-                                <button type="reset" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-times"></i></button>
-                            </div>
-
+                                     </tr>
+                                 </thead>
+                                 <tbody>
+                                     <tr ng-repeat="unidade in unidades track by unidade.uni_cod">
+                                         <td>{{unidade.cli_nom}}</td>
+                                         <td>{{unidade.uni_nom}}</td>
+                                         <td>{{unidade.uni_cnpj}}</td>
+                                         <td>{{unidade.uni_reg}}</td>
+                                         <td>
+                                            <p class="glyphicon glyphicon-remove-circle" ng-click="UnidadeNegocioInserirCtrl.removerUnidade(unidade.uni_cod)"></p>
+                                            <p class="fa fa-edit" ng-click="UnidadeNegocioInserirCtrl.carregarUnidade(unidade)"></p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-
-                        <!-- /.col-lg-6 (nested) -->
+                        <!-- /.table-responsive -->
                     </div>
-                    <!-- /.row (nested) -->
+                    <!-- /.panel-body -->
                 </div>
-                <!-- /.panel-body -->
+
             </div>
             <!-- /.panel -->
-        </div>
+        </div> <!-- FIM DIV CADASTRO DE CLIENTES  - CONTATO DO CLIENTE><-->
+        <!-- /.col-lg-6 (nested) -->
+
+        <!-- /.row (nested) -->
+
+
+        <!-- /.panel-body -->
+
+        <!-- /.panel -->
+
         <!-- /.col-lg-12 -->
-        <!-- FIM - RODAPÉ -->
-    </form>
+        <!-- FIM - CADASTRO DE CLIENTE IDENTIFICAÇÃO / CONTATO  -->
+
+        <!-- INICIO - CADASTRO DE CLIENTE DADOS CADASTRAIS -->
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                 Endereço da unidade de negócio
+             </div>
+             <div class="panel-body">
+                <div class="row" >
+                 <div class="col-lg-12">
+                    <div class="form-group">
+                        <label>Logradouro</label>
+                        <input type="text" class="form-control" ng-model="UnidadeNegocioInserirCtrl.endereco.end_log">
+                    </div>
+                    <div class="form-group">
+                        <label>Numero</label>
+                        <input type="text" class="form-control" placeholder="Digite o caracter inicial" ng-model="UnidadeNegocioInserirCtrl.endereco.end_num">
+                    </div>
+                    <div class="form-group">
+                        <label>Bairro</label>
+                        <input type="text" class="form-control" placeholder="Digite o caracter inicial" ng-model="UnidadeNegocioInserirCtrl.endereco.end_bai">
+                    </div>
+                    <div class="form-group">
+                        <label>Complemento</label>
+                        <input type="text" class="form-control" placeholder="Digite o caracter inicial" ng-model="UnidadeNegocioInserirCtrl.endereco.end_comp">
+                    </div>
+                    <div class="form-group">
+                        <label>Cidade</label>
+                        <input type="text" class="form-control" placeholder="Digite o caracter inicial" ng-model="UnidadeNegocioInserirCtrl.endereco.end_cid">
+                    </div>
+
+                    <div class="form-group">
+                        <label>UF</label>
+                        <select class="form-control" ng-model="UnidadeNegocioInserirCtrl.endereco.end_uf">
+                            <option>AC</option>
+                            <option>AL</option>
+                            <option>AP</option>
+                            <option>AM</option>
+                            <option>BA</option>
+                            <option>CE</option>
+                            <option>DF</option>
+                            <option>ES</option>
+                            <option>GO</option>
+                            <option>MA</option>
+                            <option>MT</option>
+                            <option>MS</option>
+                            <option>MG</option>
+                            <option>PA</option>
+                            <option>PB</option>
+                            <option>PR</option>
+                            <option>PE</option>
+                            <option>PI</option>
+                            <option>RJ</option>
+                            <option>RN</option>
+                            <option>RS</option>
+                            <option>RO</option>
+                            <option>SC</option>
+                            <option>SP</option>
+                            <option>TO</option>                                          
+                        </select> 
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-info btn-circle btn-lg"><i class="fa fa-check"></i></button>
+                        <button type="reset" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-times"></i></button>
+                    </div>
+
+                </div>
+
+                <!-- /.col-lg-6 (nested) -->
+            </div>
+            <!-- /.row (nested) -->
+        </div>
+        <!-- /.panel-body -->
+    </div>
+    <!-- /.panel -->
+</div>
+<!-- /.col-lg-12 -->
+<!-- FIM - RODAPÉ -->
+</form>
+</div>
 </div>
 </div>
 
 </div>
-</div>
+
 <!-- /.row -->

@@ -44,15 +44,17 @@
 
   },
 
-  uni_oft: {
-    type: 'string'
-
-  },
 
   uni_reg: {
     type: 'string'
 
   },
+
+  // COLEÇÃO DE ENDERECOS 
+contatos: {
+  collection: 'endereco',
+  via: 'uni_cod'
+},
 
   cli_cod:{
 

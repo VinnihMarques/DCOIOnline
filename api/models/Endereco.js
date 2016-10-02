@@ -44,6 +44,11 @@ end_uf: {
   type: 'string'
 
 },
+ uni_cod:{
+
+    model: 'unidadenegocio'
+  }
+
 },
 
 autoPK: false,
