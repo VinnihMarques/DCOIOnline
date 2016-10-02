@@ -5,38 +5,95 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
-module.exports = {
+ module.exports = {
 
   attributes: {
-  	cli_cod: {
-  		type: 'int',
-  		unique: true,
-  		required: true
-  	},
-  	cli_cnpj: {
-  		type: 'int',
-  		unique: true,
-  		required: true
-  	},
-      cli_nomeFantasia: {
-      type: 'string',
-      
-    },
+  // ATRIBUTOS DA TABELA DE CLIENTES
+  cli_cod: {
+    type: 'int',
+    primaryKey : true
     
-    cli_razaoSocial: {
-  		type: 'string',
-  		
-  	},
-  	cli_IE: {
-  		type: 'int',
-  		unique: true
-  		
-  	},
-  	cli_endereco: {
-  		type: 'string',
-  		
-  	},
+  },
+  cli_nom: {
+    type: 'string'
+   // required : true
 
-  }
+
+ },
+ cli_raz: {
+  type: 'string'
+   //required : true
+
+ },
+
+ cli_cnpj: {
+  type: 'string',
+  unique: true
+
+
+},
+
+cli_ie: {
+  type: 'string'
+
+},
+
+cli_status: {
+  type: 'boolean'
+
+},
+
+cli_aten: {
+  type: 'string'
+
+},
+
+
+cli_qtd_usu: {
+  type: 'int'
+
+},
+
+cli_ana_prj: {
+  type: 'string'
+
+},
+
+cli_hosp: {
+  type: 'string'
+   // required : true
+
+ },
+
+ cli_id_hosp: {
+  type: 'string'
+   // required : true
+
+ },
+
+ cli_dat_cad: {
+  type: 'datetime'
+
+},
+
+
+// COLEÇÃO DE CONTATOS 
+contatos: {
+  collection: 'contato',
+  via: 'cli_cod'
+},
+
+// COLEÇÃO DE UNIDADES DE NEGOCIO 
+unidades: {
+  collection: 'unidadeNegocio',
+  via: 'cli_cod'
+},
+
+},
+autoPK: false,
+tableName: 'CLIENTE',
+autoCreatedAt:false,
+autoUpdatedAt:false
+
+
 };
-

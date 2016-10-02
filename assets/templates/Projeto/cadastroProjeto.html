@@ -1,0 +1,107 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">PROJETO</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+ <!-- INÍCIO - CADASTRO DE CLIENTE IDENTIFICAÇÃO / CONTATO  -->
+ <div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Novo projeto
+        </div>
+        <!-- DIV CADASTRO DE CLIENTES  - IDENTIFICAÇÃO><-->
+        <div class="panel-body">
+            <form role="form"  ng-controller="ClienteInserirController as ClienteInserirCtrl" ng-submit="ClienteInserirCtrl.criarCliente()">
+                <div class="row">
+                    <div class="col-lg-6" border='0'>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Identificação do cliente
+                            </div>
+                            <div class="form-group">
+                                <label>Nome do cliente</label>
+                                <input type="text" class="form-control" ng-model="ClienteInserirCtrl.cliente.cli_nom">
+                            </div>
+
+                        </div>
+                    </div><!-- FIM DA DIV CADASTRO DE CLIENTES  - IDENTIFICAÇÃO><-->
+
+                    <div class="col-lg-6"> <!-- DIV CADASTRO DE CLIENTES  - CONTATO DO CLIENTE><-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Unidade de negócio do cliente
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label>Nome da unidade</label>
+                                    <select class="form-control"ng-model="ClienteInserirCtrl.cliente.cli_aten">
+                                        <option>UN1</option>
+                                        <option>UN2</option>                                       
+                                    </select> 
+                                </div>
+                                
+                            </div> <!-- FIM DIV CADASTRO DE CLIENTES  - CONTATO DO CLIENTE><-->
+                            <!-- /.col-lg-6 (nested) -->
+                        </div>
+                        <!-- /.row (nested) -->
+
+
+                        <!-- /.panel-body -->
+
+                        <!-- /.panel -->
+
+                        <!-- /.col-lg-12 -->
+                        <!-- FIM - CADASTRO DE CLIENTE IDENTIFICAÇÃO / CONTATO  -->
+
+                        <!-- INICIO - CADASTRO DE CLIENTE DADOS CADASTRAIS -->
+                        <div class="col-lg-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    ESCOLHA O PROJETO
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row" >
+                                        <div class="col-lg-6">
+
+                                            <div class="form-group">
+                                                <label>Tipo de projeto</label>
+                                                <select class="form-control"ng-model="ClienteInserirCtrl.cliente.cli_aten">
+                                                    <option>KPL Core</option>
+                                                    <option>KPL Enterprise</option>
+                                                    <option>KPL HUB</option>
+                                                    <option>KPL PDV</option>
+                                                    <option>Unidade de Negócio</option>
+                                                    <option>Distribuidor Logístico</option>
+                                                    <option>Plataforma</option>
+                                                    <option>Gateway de Pagamento</option>
+                                                    <option>Análise de Risco</option>
+                                                    <option>Integração ERP</option>
+                                                    <option>Integração WMS</option>                                        
+                                                </select> 
+                                            </div>                              
+                                            
+
+
+                                        </div>
+
+                                        <!-- /.col-lg-6 (nested) -->
+                                    </div>
+                                    <!-- /.row (nested) -->
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- /.panel -->
+                        </div>
+                        <!-- /.col-lg-12 -->
+                        <!-- FIM - RODAPÉ -->
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /.row -->

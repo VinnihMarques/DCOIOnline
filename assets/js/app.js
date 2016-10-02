@@ -5,27 +5,51 @@ var app = angular.module('DCOIOnlineApp', ['ngRoute']);
 app.config(['$routeProvider', '$locationProvider',
  function($routeProvider, $locationProvider) {
    $routeProvider
-     .when('/consultaUsuario', {
+     .when('/consultaUsuario', {// ROTA DE ACESSO PARA CONSULTA DE USUÁRIOS DO SISTEMA
        templateUrl: '/templates/Usuario/consultaUsuario.html'
      })
-     .when('/editaUsuario/:id', {
+     .when('/editaUsuario/:id', {// ROTA DE ACESSO PARA EDIÇÃO DE USUÁRIOS DO SISTEMA
        templateUrl: '/templates/Usuario/editaUsuario.html'
      })
      
-     .when('/cadastroUsuario', {
+     .when('/cadastroUsuario', {// ROTA DE ACESSO PARA CADASTRO DE USUÁRIOS DO SISTEMA
        templateUrl: '/templates/Usuario/cadastroUsuario.html'
      })
-     .when('/aquisicao',{
-     	templateUrl: '/templates/Aquisicoes/cadastroAquisicao.html'
-     	  })
-     .when('/aquisicaoCarrosel',{
-     	templateUrl: '/templates/Aquisicoes/cadastroAquisicaoCarrosel.html'
-     	  })
-     	
+     .when('/cadastroCliente',{// ROTA DE ACESSO PARA CADASTRO DE CLIENTES
+     	templateUrl: '/templates/Cliente/cadastroCliente.html'
+     })
+     .when('/consultaCliente/',{// ROTA DE ACESSO PARA CONSULTA DE CLIENTES
+     	templateUrl: '/templates/Cliente/consultaCliente.html'
+     })
+     .when('/editaCliente/:id',{// ROTA DE ACESSO PARA EDIÇÃO DE CLIENTES
+      templateUrl: '/templates/Cliente/editaCliente.html'
+    })
 
-   $locationProvider.html5Mode(true);
-}])
+     .when('/cadastroUnidadeNegocio',{// ROTA DE ACESSO PARA CADASTRO DE UNIDADE DE NEGOCIO
+      templateUrl: '/templates/UnidadeNegocio/cadastroUnidadeNegocio.html'
+    })
+     .when('/consultaUnidadeNegocio/',{// ROTA DE ACESSO PARA CONSULTA UNIDADE DE NEGOCIO
+      templateUrl: '/templates/UnidadeNegocio/consultaUnidadeNegocio.html'
+    })
+     .when('/editaUnidadeNegocio/:id',{// ROTA DE ACESSO PARA EDIÇÃO UNIDADE DE NEGOCIO
+      templateUrl: '/templates/UnidadeNegocio/editaUnidadeNegocio.html'
+      })
+       .when('/cadastroProjeto',{// ROTA DE ACESSO PARA CADASTRO DE PROJETO
+      templateUrl: '/templates/Projeto/cadastroProjeto.html'
+    })
+     .when('/consultaProjeto/',{// ROTA DE ACESSO PARA CONSULTA DE PROJETO
+      templateUrl: '/templates/Projeto/consultaProjeto.html'
+    })
+     .when('/editaProjeto/:id',{// ROTA DE ACESSO PARA EDIÇÃO DE PROJETO
+      templateUrl: '/templates/Projeto/editaProjeto.html'
+    })
+     
+   
+
+
+     $locationProvider.html5Mode(true);
+   }])
 
 app.controller('DCOIOnlineAppController', ['$scope', '$rootScope', function($scope, $rootScope){
-console.log("DCOIOnlineAppController");
+  console.log("DCOIOnlineAppController");
 }]);

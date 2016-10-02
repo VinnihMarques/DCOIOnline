@@ -1,0 +1,68 @@
+<!--<div id="page-wrapper" style="min-height: 860px;">-->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Clientes</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Clientes cadastrados
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body col-lg-12" ng-controller = 'ClienteController as ClienteCtrl'>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                           <th>CNPJ</th>
+                           <th>Nome do cliente</th>
+                           <th>Status</th>
+                           <th>Hospedagem</th>
+                           <th>Ambiente</th>                         
+                       </tr>
+                   </thead>
+                   <tbody>
+                    <tr ng-repeat ='rowCliente in clientes'>
+                        <td>{{rowCliente.cli_cnpj}}</td>
+                        <td>{{rowCliente.cli_nom}}</td>
+                        <td>{{rowCliente.cli_status}}</td>
+                        <td>{{rowCliente.cli_hosp}}</td>
+                        <td>{{rowCliente.cli_id_hosp}}</td>
+                        <td>
+                            <a href="/editaCliente/{{ rowCliente.cli_cod }}">
+                                <button type="button" class="btn btn-primary btn-circle">
+
+                                    <i class="fa fa-list"></i>
+                                </button>
+                            </a>
+
+                        </td> 
+                        <td>   
+
+                            <button type="button" class="btn btn-warning btn-circle" ng-click = 'ClienteCtrl.remover(rowCliente.cli_cod)'>
+                                <i class="fa fa-times" ></i>
+                            </button>
+
+                        </td>
+
+                        <td>   
+
+                            <button type="button" class="btn btn-success btn-circle">
+                                <i class="fa fa-link"></i>
+                            </button>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /.panel -->
+</div>

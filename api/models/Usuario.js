@@ -32,7 +32,7 @@ module.exports = {
    
 
   },
-  autoPK: true,
+  autoPK: false,
   tableName: 'USUARIO',
   autoCreatedAt:false,
   autoUpdatedAt:false
