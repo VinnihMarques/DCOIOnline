@@ -51,11 +51,17 @@
   },
 
   // COLEÇÃO DE ENDERECOS 
-contatos: {
+enderecos: {
   collection: 'endereco',
   via: 'uni_cod'
 },
+ // COLEÇÃO DE PROJETO_UNIDADE 
+projetosUnidade: {
+  collection: 'projetoUnidade',
+  via: 'uni_cod'
+},
 
+//RELAÇÃO COM CLIENTE VIA COLLECTION
   cli_cod:{
 
     model: 'cliente'

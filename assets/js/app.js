@@ -33,22 +33,26 @@ app.config(['$routeProvider', '$locationProvider',
     })
      .when('/editaUnidadeNegocio/:id',{// ROTA DE ACESSO PARA EDIÇÃO UNIDADE DE NEGOCIO
       templateUrl: '/templates/UnidadeNegocio/editaUnidadeNegocio.html'
-      })
-       .when('/cadastroProjeto',{// ROTA DE ACESSO PARA CADASTRO DE PROJETO
-      templateUrl: '/templates/Projeto/cadastroProjeto.html'
     })
+       .when('/cadastroProjeto',{// ROTA DE ACESSO PARA CADASTRO DE PROJETO
+        templateUrl: '/templates/Projeto/cadastroProjeto.html'
+      })
      .when('/consultaProjeto/',{// ROTA DE ACESSO PARA CONSULTA DE PROJETO
       templateUrl: '/templates/Projeto/consultaProjeto.html'
     })
      .when('/editaProjeto/:id',{// ROTA DE ACESSO PARA EDIÇÃO DE PROJETO
       templateUrl: '/templates/Projeto/editaProjeto.html'
     })
-     
-   
+
+        .when('/cadastroAquisicao/:id',{// ROTA DE ACESSO PARA CADASTRO DE ARQUISIÇÃO CO CLIENTE DE PROJETO
+          templateUrl: '/templates/Aquisicao/cadastroAquisicao.html'
+        })
 
 
-     $locationProvider.html5Mode(true);
-   }])
+
+
+        $locationProvider.html5Mode(true);
+      }])
 
 app.controller('DCOIOnlineAppController', ['$scope', '$rootScope', function($scope, $rootScope){
   console.log("DCOIOnlineAppController");

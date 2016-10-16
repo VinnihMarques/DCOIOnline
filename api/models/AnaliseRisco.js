@@ -1,5 +1,5 @@
 /**
- * Endereco.js
+ * AnaliseRisco.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
@@ -8,51 +8,55 @@
 module.exports = {
 
   attributes: {
-  // ATRIBUTOS DA TABELA DE ENDERECO
-  end_cod: {
+  // ATRIBUTOS DA TABELA ANALISE_RISCO
+  ana_cod: {
     type: 'int',
     primaryKey : true
     
   },
-  end_log: {
+  ana_nom: {
     type: 'string'
-   // required : true
-
-
+   
  },
- end_num: {
+ ana_chave_loja_homo: {
   type: 'string'
-   //required : true
-
+   
  },
 
- end_bai: {
-  type: 'string'
-},
-
-end_comp: {
+ ana_usu_homo: {
   type: 'string'
 
 },
 
-end_cid: {
+ana_sen_homo: {
   type: 'string'
 
 },
 
-end_uf: {
+ana_chave_loja_prod: {
   type: 'string'
 
 },
- uni_cod:{
 
-    model: 'unidadeNegocio'
-  }
+
+ana_usu_prod: {
+  type: 'string'
 
 },
 
+ana_sen_prod: {
+  type: 'string'
+
+},
+ pro_uni_cod:{
+      model:'projetoUnidade'
+    }
+
+
+},
 autoPK: false,
-tableName: 'ENDERECO',
+tableName: 'ANALISE_RISCO',
 autoCreatedAt:false,
 autoUpdatedAt:false
+
 };

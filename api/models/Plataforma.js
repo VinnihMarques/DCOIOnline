@@ -1,5 +1,5 @@
 /**
- * Endereco.js
+ * Plataforma.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
@@ -8,51 +8,57 @@
 module.exports = {
 
   attributes: {
-  // ATRIBUTOS DA TABELA DE ENDERECO
-  end_cod: {
+  // ATRIBUTOS DA TABELA PLATAFORMA
+  plat_cod: {
     type: 'int',
     primaryKey : true
     
   },
-  end_log: {
+  plat_nom: {
     type: 'string'
-   // required : true
-
-
+   
  },
- end_num: {
+ plat_con_tec: {
   type: 'string'
-   //required : true
-
+   
  },
 
- end_bai: {
-  type: 'string'
-},
-
-end_comp: {
+ plat_url_adm: {
   type: 'string'
 
 },
 
-end_cid: {
+plat_usu: {
   type: 'string'
 
 },
 
-end_uf: {
+plat_sen: {
   type: 'string'
 
 },
- uni_cod:{
 
-    model: 'unidadeNegocio'
-  }
+
+plat_url_loja: {
+  type: 'string'
 
 },
 
+plat_chave: {
+  type: 'string'
+
+},
+
+ pro_uni_cod:{
+      model:'projetoUnidade'
+    }
+
+
+},
 autoPK: false,
-tableName: 'ENDERECO',
+tableName: 'PLATAFORMA',
 autoCreatedAt:false,
 autoUpdatedAt:false
+
 };
+

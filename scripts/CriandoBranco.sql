@@ -3,19 +3,19 @@
 
 /****** CRIANDO O BANCO DE DADOS  Script Date: 05/09/2016 ******/
 
-  IF db_id('DCOIONLINE2') IS NOT NULL
+  IF db_id('DCOIONLINE') IS NOT NULL
 BEGIN
-    DROP DATABASE [DCOIONLINE2]
-	CREATE DATABASE [DCOIONLINE2]
+    DROP DATABASE [DCOIONLINE]
+	CREATE DATABASE [DCOIONLINE]
 END
 
 ELSE
 BEGIN
-    CREATE DATABASE [DCOIONLINE2]
+    CREATE DATABASE [DCOIONLINE]
 END
 
 go
-USE [DCOIONLINE2]
+USE [DCOIONLINE]
 GO
 
 /****** CRIANDO TABELAS DO BANCO    Script Date: 05/09/2016 ******/
@@ -252,6 +252,7 @@ CREATE TABLE [dbo].[AQUISICAO](
 	[aqu_dat_cad] [datetime] NOT NULL,
 	[aqu_email] [varchar](100),
 	[aqu_ebuilder] [bit],
+	[aqu_eb_nom] [varchar](100),
 	[aqu_imp_cli] [bit],
 	[aqu_imp_ev] [bit],
 	[aqu_imp_inv] [bit],
@@ -265,6 +266,7 @@ CREATE TABLE [dbo].[AQUISICAO](
 	[aqu_env_bol] [bit],
 	[aqu_exp_sint] [bit],
 	[aqu_consig] [bit],
+	[aqu_trocdev] [bit],
 	[aqu_dist_cor] [bit],
 	[aqu_dist_proc] [bit],
 	[aqu_dist_dir] [bit],
@@ -314,6 +316,8 @@ GO
 ALTER TABLE [dbo].[AQUISICAO] ADD  DEFAULT ((0)) FOR [aqu_exp_sint]
 GO
 ALTER TABLE [dbo].[AQUISICAO] ADD  DEFAULT ((0)) FOR [aqu_consig]
+GO
+ALTER TABLE [dbo].[AQUISICAO] ADD  DEFAULT ((0)) FOR [aqu_trocdev]
 GO
 ALTER TABLE [dbo].[AQUISICAO] ADD  DEFAULT ((0)) FOR [aqu_dist_cor]
 GO
@@ -512,7 +516,16 @@ insert into [USUARIO] values ('Heitor Lusvardi','hlusvardi','123!@')
 insert into [USUARIO] values ('Otávio Rojas','orojas','123!@')
 insert into [USUARIO] values ('Karla Patrícia','kpatricia','123!@')
 
-
-
-
+/****** INSERINDO DADOS NA TEBELA PROJETO ******/
+insert into [PROJETO] (proj_nom,proj_desc) values ('KPL CORE','Projeto KPL Core')
+insert into [PROJETO] (proj_nom,proj_desc) values ('KPL ENTERPRISE','Projeto KPL Enterprise')
+insert into [PROJETO] (proj_nom,proj_desc) values ('KPL HUB','Projeto KPL Hub')
+insert into [PROJETO] (proj_nom,proj_desc) values ('KPL UNIDADE NEGOCIO','Projeto KPL Unidade Negócio')
+insert into [PROJETO] (proj_nom,proj_desc) values ('KPL INTEGRAÇÂO PLATAFORMA','Projeto KPL Integração Plataforma')
+insert into [PROJETO] (proj_nom,proj_desc) values ('KPL INTEGRAÇÂO ERP','Projeto KPL Integração ERP')
+insert into [PROJETO] (proj_nom,proj_desc) values ('KPL INTEGRAÇÂO WMS','Projeto KPL Integração WMS')
+insert into [PROJETO] (proj_nom,proj_desc) values ('KPL INTEGRAÇÂO GATEWAY DE PAGAMENTO','Projeto KPL Integração Gateway de Pagamento')
+insert into [PROJETO] (proj_nom,proj_desc) values ('KPL INTEGRAÇÂO ANALISE DE RISCO','Projeto KPL Integração Análise de Risco')
+insert into [PROJETO] (proj_nom,proj_desc) values ('KPL DISTRIBUIDOR LOGÍSTICO','Projeto KPL Distribuidor Logístico')
+insert into [PROJETO] (proj_nom,proj_desc) values ('KPL PDV','Projeto KPL PDV')
 

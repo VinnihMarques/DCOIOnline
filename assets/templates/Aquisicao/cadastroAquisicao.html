@@ -1,0 +1,245 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Check List - KPL</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+ <!-- INÍCIO - CADASTRO DE CLIENTE IDENTIFICAÇÃO / CONTATO  -->
+ <div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Aquisões do cliente
+        </div>
+        <!-- DIV CADASTRO DE CLIENTES  - IDENTIFICAÇÃO><-->
+        <div class="panel-body">
+            <form role="form"  ng-controller="ClienteInserirController as ClienteInserirCtrl" ng-submit="ClienteInserirCtrl.criarCliente()">
+                <div class="row">
+                    <div class="col-lg-6" border='0'>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Importações Massivas
+                            </div>
+                            <div class="form-group">
+                                <label>E-mail do cliente</label>
+                                <input type="text" class="form-control" size=200 maxlength=200 ng-model="ClienteInserirCtrl.cliente.cli_nom">
+                            </div>
+                            <div class="form-group">
+
+                                <div class="checkbox">
+                                <label>Cliente já possui e-Builder?</label>
+                                <input type="checkbox" value="true">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Nome do E-builder</label>
+                            <input type="text" class="form-control" size=200 maxlength=200 ng-model="ClienteInserirCtrl.cliente.cli_nom">
+                        </div>
+                        <div class="form-group">
+                            <label>Importação Massiva de Clientes</label>
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="form-group">
+                            <label>Importação Massiva de Estoque virtual</label>
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="form-group">
+                            <label>Importação Massiva de Inventário</label>
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="form-group">
+                            <label>Importação Massiva de Preços</label>
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="form-group">
+                            <label>Importação Massiva de Produtos</label>
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="form-group">
+                            <label>Importação de XML de Entrada</label>
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="form-group">
+                            <label>Importação de arquivo CNAB</label>
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="form-group">
+                            <label>Importação Massiva de Tabela IBPT</label>
+                            <input type="checkbox" value="true">
+                        </div>
+                    </div>
+                </div><!-- FIM DA DIV CADASTRO DE CLIENTES  - IDENTIFICAÇÃO><-->
+
+                <div class="col-lg-6"> <!-- DIV CADASTRO DE CLIENTES  - CONTATO DO CLIENTE><-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Rotinas do sistma
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                           <div class="form-group">
+                            <label>Rotina de cancelamento automático de pedidos com boleto
+                            </label>
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="form-group">
+                            <label>Rotina de cancelamento automático de pedidos com cartão
+                            </label>
+                            <input type="checkbox" value="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Rotina de envio de boleto por e-mail</label>
+                            <input type="checkbox" value="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Exportação do arquivo Sintegra</label>
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="form-group">
+                            <label>Possui Consignação?</label>
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="form-group">
+                            <label>Possui Trocas e devoluções?</label>
+                            <input type="checkbox" value="true">
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div> <!-- FIM DIV CADASTRO DE CLIENTES  - CONTATO DO CLIENTE><-->
+                <!-- /.col-lg-6 (nested) -->
+            </div>
+            <!-- /.row (nested) -->
+
+
+            <!-- /.panel-body -->
+
+            <!-- /.panel -->
+
+            <!-- /.col-lg-12 -->
+            <!-- FIM - CADASTRO DE CLIENTE IDENTIFICAÇÃO / CONTATO  -->
+
+            <!-- INICIO - CADASTRO DE CLIENTE DADOS CADASTRAIS -->
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6" border='0'>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Distribuidores Logísticos
+                    </div>
+                    <div class="form-group">
+                        <label>Possui integração com Correios?</label>
+                        <input type="checkbox" value="true">
+                    </div>
+                    <div class="form-group">
+                        <label>Possui integração Proceda?</label>
+                        <input type="checkbox" value="true">
+                    </div>
+                    <div class="form-group">
+                        <label>Possui integração com Direct Log?</label>
+                        <input type="checkbox" value="true">
+                    </div>
+                    <div class="form-group">
+                        <label>Possui integração com Total Express?</label>
+                        <input type="checkbox" value="true">
+                    </div>
+                    <div class="form-group">
+                        <label>Possui Outro distribuidor Logístico?</label>
+                        <input type="checkbox" value="true">
+                    </div>
+                    <div class="form-group">
+                        <label>KPL HUB Mercado Livre</label>
+                        <input type="checkbox" value="true">
+                    </div>
+                    <div class="form-group">
+                        <label>KPL HUB Mercado CNOVA</label>
+                        <input type="checkbox" value="true">
+                    </div>
+                    <div class="form-group">
+                        <label>KPL HUB Mercado B2W</label>
+                        <input type="checkbox" value="true">
+                    </div>
+                </div>
+            </div><!-- FIM DA DIV CADASTRO DE CLIENTES  - IDENTIFICAÇÃO><-->
+
+            <div class="col-lg-6"> <!-- DIV CADASTRO DE CLIENTES  - CONTATO DO CLIENTE><-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Integrações do cliente
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                       <div class="form-group">
+                        <label>Integração Plataforma</label>
+                        <input type="checkbox" value="true">
+                    </div>
+                    <div class="form-group">
+                        <label>Integração ERP</label>
+                        <input type="checkbox" value="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Integração WMS</label>
+                        <input type="checkbox" value="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Possui variação de produtos?</label>
+                        <input type="checkbox" value="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Possui produto KIT?</label>
+                        <input type="checkbox" value="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Possui produto unico?</label>
+                        <input type="checkbox" value="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Possui produto brinde?</label>
+                        <input type="checkbox" value="true">
+                    </div>
+                    <div class="form-group">
+                        <label>KPL Dashboard</label>
+                        <input type="checkbox" value="true">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>E-mail do KPL Dashboarb</label>
+                        <input type="text" class="form-control" size=200 maxlength=200 ng-model="ClienteInserirCtrl.cliente.cli_nom">
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div> <!-- FIM DIV CADASTRO DE CLIENTES  - CONTATO DO CLIENTE><-->
+            <!-- /.col-lg-6 (nested) -->
+        </div>
+        <!-- /.row (nested) -->
+
+
+        <!-- /.panel-body -->
+
+        <!-- /.panel -->
+
+        <!-- /.col-lg-12 -->
+        <!-- FIM - CADASTRO DE CLIENTE IDENTIFICAÇÃO / CONTATO  -->
+
+        <!-- INICIO - CADASTRO DE CLIENTE DADOS CADASTRAIS -->
+    </div>
+
+</form>
+</div>
+
+</div>
+</div>
+</div>
+<!-- /.row -->

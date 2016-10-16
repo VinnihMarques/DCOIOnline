@@ -14,7 +14,7 @@
         </div>
         <!-- DIV CADASTRO DE CLIENTES  - IDENTIFICAÇÃO><-->
         <div class="panel-body">
-            <form role="form"  ng-controller="ClienteInserirController as ClienteInserirCtrl" ng-submit="ClienteInserirCtrl.criarCliente()">
+            <form role="form"  ng-controller="ProjetoListaDados as ProjetoListaDadosCtrl" ng-submit="ProjetoListaDadosCtrl.cadastrarProjetoUnidade()">
                 <div class="row">
                     <div class="col-lg-6" border='0'>
                         <div class="panel panel-default">
@@ -23,7 +23,9 @@
                             </div>
                             <div class="form-group">
                                 <label>Nome do cliente</label>
-                                <input type="text" class="form-control" ng-model="ClienteInserirCtrl.cliente.cli_nom">
+                                <select class="form-control" ng-options="clientes.cli_nom for clientes in clientes track by clientes.cli_cod" ng-model="cliente"ng-blur="ProjetoListaDadosCtrl.carregaUnidades()">
+
+                                </select> 
                             </div>
 
                         </div>
@@ -38,9 +40,8 @@
                             <div class="panel-body">
                                 <div class="form-group">
                                     <label>Nome da unidade</label>
-                                    <select class="form-control"ng-model="ClienteInserirCtrl.cliente.cli_aten">
-                                        <option>UN1</option>
-                                        <option>UN2</option>                                       
+                                    <select class="form-control" ng-options="unidades.uni_nom for unidades in unidades track by unidades.uni_cod" ng-model="unidade">
+
                                     </select> 
                                 </div>
                                 
@@ -58,50 +59,53 @@
                         <!-- FIM - CADASTRO DE CLIENTE IDENTIFICAÇÃO / CONTATO  -->
 
                         <!-- INICIO - CADASTRO DE CLIENTE DADOS CADASTRAIS -->
-                        <div class="col-lg-6">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    ESCOLHA O PROJETO
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row" >
-                                        <div class="col-lg-6">
-
-                                            <div class="form-group">
-                                                <label>Tipo de projeto</label>
-                                                <select class="form-control"ng-model="ClienteInserirCtrl.cliente.cli_aten">
-                                                    <option>KPL Core</option>
-                                                    <option>KPL Enterprise</option>
-                                                    <option>KPL HUB</option>
-                                                    <option>KPL PDV</option>
-                                                    <option>Unidade de Negócio</option>
-                                                    <option>Distribuidor Logístico</option>
-                                                    <option>Plataforma</option>
-                                                    <option>Gateway de Pagamento</option>
-                                                    <option>Análise de Risco</option>
-                                                    <option>Integração ERP</option>
-                                                    <option>Integração WMS</option>                                        
-                                                </select> 
-                                            </div>                              
-                                            
-
-
-                                        </div>
-
-                                        <!-- /.col-lg-6 (nested) -->
-                                    </div>
-                                    <!-- /.row (nested) -->
-                                </div>
-                                <!-- /.panel-body -->
-                            </div>
-                            <!-- /.panel -->
-                        </div>
+                        
                         <!-- /.col-lg-12 -->
                         <!-- FIM - RODAPÉ -->
-                    </form>
-                </div>
-            </div>
 
-        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                 <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            ESCOLHA O PROJETO
+                        </div>
+                        <div class="panel-body">
+                            <div class="row" >
+                                <div class="col-lg-12">
+
+                                    <div class="form-group">
+                                        <label>Tipo de projeto</label>
+                                        <select class="form-control"ng-options="projetos.proj_nom for projetos in projetos track by projetos.proj_cod" ng-model="projeto">
+                                        </select> 
+                                    </div>  
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-info btn-circle btn-lg"><i class="fa fa-check"></i></button>
+                                        <button type="reset" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-times"></i></button>
+                                    </div>                            
+
+
+
+                                </div>
+
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
+
+
+            </div>
+        </form>
     </div>
-    <!-- /.row -->
+</div>
+</div>
+</div>
+<!-- /.row -->
