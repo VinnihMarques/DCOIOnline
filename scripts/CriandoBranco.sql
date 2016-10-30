@@ -45,7 +45,7 @@ CREATE TABLE [dbo].[CLIENTE](
 	[cli_qtd_usu] [int] NULL,
 	[cli_ana_prj] [varchar](20) NULL,
 	[cli_hosp] [varchar](6) NOT NULL,
-	[cli_id_hosp] [varchar](6)NOT NULL,
+	[cli_id_hosp] [varchar](10)NOT NULL,
 	[cli_dat_cad] datetime default getdate(),
 
 PRIMARY KEY ([cli_cod]))
@@ -121,8 +121,8 @@ GO
 
 CREATE TABLE [dbo].[CONTATO](
 	[con_cod] [int] IDENTITY(1,1) NOT NULL,
-	[con_tel] [int] NULL,
-	[con_cel] [int] NULL,
+	[con_tel] [varchar](10) NULL,
+	[con_cel] [varchar](12) NULL,
 	[con_fax] [int] NULL,
 	[con_email] [varchar](100) NULL,
 	[con_resp] [varchar](100) NULL,
@@ -359,6 +359,58 @@ ON DELETE CASCADE
 GO
 
 print 'TABELA AQUISICAO CRIADA COM SUCESSO'
+
+/****** CRIANDO TABELA OPERACIONAL ******/
+CREATE TABLE [dbo].[OPERACIONAL](
+	[opr_cod] [int] primary key IDENTITY(1,1) NOT NULL,
+	[opr_smtp] [VARCHAR](100),
+	[opr_port_smtp] [int],
+	[opr_cont_danfe] [VARCHAR](50),
+	[opr_sen_danfe] [VARCHAR](50),
+	[opr_email_ocul_danfe] [VARCHAR](50),
+	[opr_serie] [int],
+	[opr_bol_ant] [bit],
+	[opr_bol_pos] [bit],
+	[opr_cheque] [bit],
+	[opr_dep] [bit],
+	[opr_cart_cred] [bit],
+	[opr_cart_deb] [bit],
+	[pro_uni_cod] [int] NOT NULL)
+	
+
+ALTER TABLE [dbo].[OPERACIONAL]  WITH CHECK ADD  CONSTRAINT [FK_OPERACIONAL_PROJETO_UNIDADE] FOREIGN KEY([pro_uni_cod])
+REFERENCES [dbo].[PROJETO_UNIDADE] ([pro_uni_cod])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+
+GO
+
+print 'TABELA OPERACIONAL CRIADA COM SUCESSO'
+
+/****** CRIANDO TABELA BANCO ******/
+CREATE TABLE [dbo].[BANCO](
+	[ban_cod] [int] primary key IDENTITY(1,1) NOT NULL,
+	[ban_nom] [VARCHAR](200),
+	[ban_agt] [VARCHAR](50),
+	[ban_cont] [VARCHAR](50),
+	[ban_cod_emp] [VARCHAR](50),
+	[ban_cod_conv] [VARCHAR](50),
+	[ban_cod_ced] [VARCHAR](50),
+	[ban_num_cart] [VARCHAR](50),
+		[pro_uni_cod] [int] NOT NULL)
+	
+
+ALTER TABLE [dbo].[BANCO]  WITH CHECK ADD  CONSTRAINT [FK_BANCO_PROJETO_UNIDADE] FOREIGN KEY([pro_uni_cod])
+REFERENCES [dbo].[PROJETO_UNIDADE] ([pro_uni_cod])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+
+GO
+
+print 'TABELA BANCO CRIADA COM SUCESSO'
+
+
+
 
 /****** CRIANDO TABELA PLATAFORMA ******/
 CREATE TABLE [dbo].[PLATAFORMA](

@@ -44,8 +44,11 @@ app.config(['$routeProvider', '$locationProvider',
       templateUrl: '/templates/Projeto/editaProjeto.html'
     })
 
-        .when('/cadastroAquisicao/:id',{// ROTA DE ACESSO PARA CADASTRO DE ARQUISIÇÃO CO CLIENTE DE PROJETO
+     .when('/cadastroAquisicao/:id',{// ROTA DE ACESSO PARA CADASTRO DE ARQUISIÇÃO CO CLIENTE DE PROJETO
           templateUrl: '/templates/Aquisicao/cadastroAquisicao.html'
+        })
+     .when('/cadastroHub',{// ROTA DE ACESSO PARA TESTE
+          templateUrl: '/templates/Hub/cadastroHub.html'
         })
 
 
