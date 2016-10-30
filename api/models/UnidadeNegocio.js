@@ -39,6 +39,13 @@
 
 
   },
+
+   uni_cnae: {
+    type: 'string',
+    
+
+
+  },
   uni_sig: {
     type: 'string'
 

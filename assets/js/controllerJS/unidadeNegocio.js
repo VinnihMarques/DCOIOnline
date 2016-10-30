@@ -21,8 +21,7 @@ app.controller('UnidadeNegocioInserirController',['$scope','$rootScope','$http',
 				console.log('Unidade de negócio cadatrada com sucesso!');
 				resp.cli_nom = $scope.cliente.cli_nom;
 				$scope.thisEndereco.endereco.uni_cod = resp.uni_cod;
-
-				console.log('ESTOU AQUI ENDERECO',$scope.thisEndereco.endereco.uni_cod,$scope.thisEndereco.end_log);
+			
 				$http.post('/endereco/create', $scope.thisEndereco.endereco).success(function(resp){
 					console.log('Endereco cadatrado com sucesso!');
 					this.unidade.endereco = $scope.thisEndereco.endereco;

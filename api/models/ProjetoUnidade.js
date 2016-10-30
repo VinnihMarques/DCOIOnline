@@ -5,7 +5,7 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
-module.exports = {
+ module.exports = {
 
   attributes: {
   // ATRIBUTOS DA TABELA DE PROJETO_UNIDADE
@@ -15,18 +15,26 @@ module.exports = {
     
   },
   proj_cod: {
-     model: 'projeto'
+   model: 'projeto'
    
 
  },
  uni_cod: {
   model: 'unidadeNegocio'
-   
- },
 
- aquisicao: {
-      model:'aquisicao'
-    }
+},
+
+aquisicao: {
+  model:'aquisicao'
+},
+
+hub: {
+  model:'hub'
+},
+
+banco: {
+  model:'banco'
+}
 
 },
 
