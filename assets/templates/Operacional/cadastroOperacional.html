@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Check List KPL HUB</h1>
+        <h1 class="page-header">OPERACIONAL</h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
@@ -10,97 +10,176 @@
  <div class="col-lg-12">
     <div class="panel panel-default">
         <div class="panel-heading">
-            KPL HUB
+            Homologação Operacional
         </div>
         <!-- DIV CADASTRO DE CLIENTES  - IDENTIFICAÇÃO><-->
         <div class="panel-body">
             <form role="form"  ng-controller="ClienteInserirController as ClienteInserirCtrl" ng-submit="ClienteInserirCtrl.criarCliente()">
                 <div class="row">
-                    <div class="col-lg-12" border='0'>
+                    <div class="col-lg-6" border='0'>
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                Dados do KPL HUB
+                               DADOS DA EMPRESA 
                             </div>
                             <div class="form-group">
-                                <label>Nome do contato principal do projeto</label>
-                                <input type="text" class="form-control" size=200 maxlength=200 ng-model="ClienteInserirCtrl.cliente.cli_nom">
-                            </div>
-                            <div class="form-group">
-                                <label>Empresa</label>
-                                <input type="text" class="form-control" size=200 maxlength=200>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>E-mail para repostório KPL</label>
+                                <label>CNPJ da empresa emissora da NF-e</label>
                                 <input type="text" class="form-control" size=200 maxlength=200 ng->
                             </div>
                             <div class="form-group">
-                                <label>Possui loja oficial no Mercado Livre?</label>
-                                <input type="checkbox" value="true">
-                            </div>
-                            <div class="form-group">
-                                <label>Tipo de anúncio no Mercado Livre</label>
-                                <select class="form-control">
-                                    <option>Clássico</option>
-                                    <option>Premium</option>
-                                </select> 
-                            </div>
-                            <div class="form-group">
-                                <label>Tipo de Envio</label>
-                                <select class="form-control">
-                                    <option>ME1</option>
-                                    <option>ME2</option>
-                                </select> 
-                            </div>
-                            <div class="form-group">
-                                <label>Possui projeto fulfilment Mercado Livre?</label>
-                                <input type="checkbox" value="true">
-                            </div>
-                            <div class="form-group">
-                                <label>Possui projeto coleta cross docking?</label>
-                                <input type="checkbox" value="true">
-                            </div>
-                            <div class="form-group">
-                                <label>Possui custom variations (customização de variação)?</label>
-                                <input type="checkbox" value="true">
-                            </div>
-                            <div class="form-group">
-                                <label>Trabalha com entrega à combinar?</label>
-                                <input type="checkbox" value="true">
-                            </div>
-                            <div class="form-group">
-                                <label>Possui repositório de imagem?</label>
-                                <input type="checkbox" value="true">
-                            </div>
-                            <div class="form-group">
-                                <label>Digite endereço do repositório</label>
+                                <label>Razão social</label>
                                 <input type="text" class="form-control" size=200 maxlength=200>
                             </div>
+                            <div class="form-group">
+                                <label for="cnpj">Inscrição estadual</label>
+                                <input type="text" class="form-control">
+
+                            </div>
+                            <div class="form-group">
+                                <label>Endereço</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Regime tributário</label>
+                                <input type="text" class="form-control">
+                            </div>
+                             <div class="form-group">
+                                <label>CNAE</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Servidor SMTP</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Porta de comunicação servidor SMTP</label>
+                                <input type="text" class="form-control">
+                            </div>
+                              <div class="form-group">
+                                <label>Conta de e-mail para envio do Danfe</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Senha do e-mail para envio do Danfe</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>E-mail para cópia oculta do XML da NF-e</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Série do DANFE atual/para o Ábacos</label>
+                                <input type="text" class="form-control">
+                            </div>
+                           
+                           
+                            <div class="form-group">
+
+                                <label>ID Hospedagem Mercado Backoffice</label>
+                                <input type="text" class="form-control"  ng-model="ClienteInserirCtrl.cliente.cli_id_hosp">                            
+                            </div>
+                            
                         </div>
                     </div><!-- FIM DA DIV CADASTRO DE CLIENTES  - IDENTIFICAÇÃO><-->
 
-                    <!-- /.row (nested) -->
+                    <div class="col-lg-6"> <!-- DIV CADASTRO DE CLIENTES  - CONTATO DO CLIENTE><-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Contato do cliente
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label>Telefone do cliente</label>
+                                    <input type="text" class="form-control" ng-model="ClienteInserirCtrl.contato.con_tel">
+                                </div>
+                                <div class="form-group">
+                                    <label>Celular do cliente</label>
+                                    <input type="text" class="form-control"  ng-model="ClienteInserirCtrl.contato.con_cel">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Fax</label>
+                                    <input type="text" class="form-control"  ng-model="ClienteInserirCtrl.contato.con_fax">
+                                </div>
+                                <div class="form-group">
+                                    <label>E-mail</label>
+                                    <input type="text" class="form-control"  ng-model="ClienteInserirCtrl.contato.con_email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Responsável</label>
+                                    <input type="text" class="form-control"ng-model="ClienteInserirCtrl.contato.con_resp">                             
+                                </div>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div> <!-- FIM DIV CADASTRO DE CLIENTES  - CONTATO DO CLIENTE><-->
+                    <!-- /.col-lg-6 (nested) -->
+                </div>
+                <!-- /.row (nested) -->
 
 
-                    <!-- /.panel-body -->
+                <!-- /.panel-body -->
 
+                <!-- /.panel -->
+
+                <!-- /.col-lg-12 -->
+                <!-- FIM - CADASTRO DE CLIENTE IDENTIFICAÇÃO / CONTATO  -->
+
+                <!-- INICIO - CADASTRO DE CLIENTE DADOS CADASTRAIS -->
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            DADOS CADASTRAIS
+                        </div>
+                        <div class="panel-body">
+                            <div class="row" >
+                                <div class="col-lg-12">
+
+                                    <div class="form-group">
+                                        <label>Tipo de atendimento</label>
+                                        <select class="form-control"ng-model="ClienteInserirCtrl.cliente.cli_aten">
+                                            <option>Padrão</option>
+                                            <option>Premium</option>                                       
+                                        </select> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Analista de Projeto</label>
+                                        <select class="form-control" ng-model="ClienteInserirCtrl.cliente.cli_ana_prj">
+                                            <option>Karla Oliveira</option>
+                                            <option>Andressa Fonseca</option>
+                                            <option>Tatiane Naltchadjan</option>
+                                            <option>Aline Silva</option>
+                                            <option>Daniel Silveira</option>
+                                            <option>Outro</option>                                          
+                                        </select> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Número de usuários contratados</label>
+                                        <input type="text" class="form-control" placeholder="Digite o caracter inicial" ng-model="ClienteInserirCtrl.cliente.cli_qtd_usu">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-info btn-circle btn-lg"><i class="fa fa-check"></i></button>
+                                        <button type="reset" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-times"></i></button>
+                                    </div>
+
+                                </div>
+
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
                     <!-- /.panel -->
-
-                    <!-- /.col-lg-12 -->
-                    <!-- FIM - CADASTRO DE CLIENTE IDENTIFICAÇÃO / CONTATO  -->
-
-                    <!-- INICIO - CADASTRO DE CLIENTE DADOS CADASTRAIS -->
                 </div>
-
-                <div class="form-group">
-                    <button type="reset" class="btn btn-warning btn-circle btn-lg"><i class="fa  fa-rotate-left"></i></button>
-                    <button type="submit" class="btn btn-info btn-circle btn-lg"><i class="fa fa-arrow-right"></i></button>
-                </div>
+                <!-- /.col-lg-12 -->
+                <!-- FIM - RODAPÉ -->
             </form>
         </div>
-
     </div>
+
 </div>
 </div>
 <!-- /.row -->
-

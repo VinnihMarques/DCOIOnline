@@ -153,6 +153,7 @@ CREATE TABLE [dbo].[UNIDADE_NEGOCIO](
 	[uni_cnpj] [varchar](14) UNIQUE NOT NULL,
 	[uni_ie]   [varchar](13) UNIQUE,
 	[uni_im]   [varchar](13) UNIQUE,
+	[uni_cnae] [varchar](10),
 	[uni_reg]   [varchar](20),
 	[uni_status] [bit] NOT NULL,
 	[uni_sig]   [varchar](2),

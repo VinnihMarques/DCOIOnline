@@ -30,12 +30,12 @@
   
 },
 
- opr_sen_danfe:: {
+ opr_sen_danfe: {
   type: 'string'
 
 },
 
- opr_email_ocul_danfe:: {
+ opr_email_ocul_danfe: {
   type: 'string'
 
 },
